@@ -82,6 +82,10 @@ header nav ul li a:hover {
 }
 /*End Hero Styles*/
 
+/*Main Sections Styles*/
+
+/*End Main Sections Styles*/
+
 /*Footer Styles*/
 footer {
     padding: 25px 20px;
@@ -98,3 +102,5 @@ footer h2 {
     margin: 0;
 }
 /*End Footer Styles*/
+
+/*Media Quires*/
