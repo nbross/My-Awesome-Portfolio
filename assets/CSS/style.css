@@ -83,7 +83,28 @@ header nav ul li a:hover {
 /*End Hero Styles*/
 
 /*Main Sections Styles*/
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    margin: 25px 0;
+    padding: 10px 0;
+    justify-content: space-between;
+}
 
+.main-section h2 {
+    border-right: 6px solid var(--header-color);
+    text-align: right;
+    line-height: 1.2;
+    font-size: 3vw;
+    padding-right: 15px;
+    flex: 0 0 20%;
+}
+
+.main-section article {
+    
+}
 /*End Main Sections Styles*/
 
 /*Footer Styles*/
