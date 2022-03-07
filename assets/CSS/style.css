@@ -16,6 +16,10 @@ body {
     --first-text: #1D594E;
     --test-color: #F28705;
 }
+
+p {
+    margin: 0;
+}
 /*End Global Styles*/
 
 /*Header Styles*/
@@ -84,6 +88,10 @@ header nav ul li a:hover {
 /*End Hero Styles*/
 
 /*Main Sections Styles*/
+main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
 .main-section {
     display: flex;
     flex-wrap: wrap;
@@ -104,13 +112,14 @@ header nav ul li a:hover {
     color: #F23030;
 }
 
-.main-section div {
+.main-section article {
     flex: 0 0 77%;
 }
 
 .main-section p {
     margin-bottom: 20px;
-    justify-content: right;
+    font-size: 1.5rem;
+    color: var(--test-color);
 }
 
 .container {
@@ -132,12 +141,33 @@ header nav ul li a:hover {
     color: var(--first-text);
     padding:  0 0 20px 0;
     margin: 0.6em;
-    min-height: 500px;
-    max-height: 500px;
-    min-width: 350px;
-    max-width: 350px;
-    flex-basis: calc(50% - 1em);
+    min-height: 250px;
+    max-height: 250px;
+    flex-basis: calc(45% - 1em);
 }
+
+.flex-item:first-child {
+    min-height: 500px;
+    flex-basis: 100%;
+}
+
+.flex-item div {
+    background-color: #F23030;
+    padding: 6px 8px;
+}
+
+.flex-item h3 {
+    font-size: 1.3rem;
+}
+
+.flex-item span {
+    font-size: 1rem;
+}
+
+.flex-item:hover {
+    background-color: var(--base-color);
+}
+
 /*project images*/
 .robots {
     background-image: url(../images/istockphoto-152404829-612x612.jpg);
@@ -145,6 +175,10 @@ header nav ul li a:hover {
 
 .hori {
     background-image: url(../images/Horiseon-Code-Refactor.png);
+}
+
+.run-buddy {
+    background-image: url(../images/Runner-training-on-running-track-732x549-thumbnail.jpg);
 }
 /*end project images*/
 
@@ -191,3 +225,71 @@ footer h2 {
 /*End Footer Styles*/
 
 /*Media Quires*/
+@media screen and (max-width: 980px) {
+    header {
+        padding: 0 0 12px 0;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    footer h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .main-section h2 {
+        flex: 0 0 100%;
+        border-right: none;
+        margin-bottom: 22px;
+        padding: 10px;
+        font-size: 7vw;
+        text-align: left;
+        border-bottom: 6px solid var(--header-color);
+    }
+
+    .main-section div {
+        flex: 0 0 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flex-item {
+        flex-basis: 100%;
+    }
+
+    .flex-item:first-child {
+        min-height: 150px;
+        flex-basis: 100%;
+    }
+
+    .contact address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        justify-content: center;
+        text-align: center;
+    }
+
+}
